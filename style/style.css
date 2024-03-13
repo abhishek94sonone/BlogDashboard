@@ -1,0 +1,143 @@
+:root {
+    --background-color: #232830;
+    --recursive-font: 'Recursive', sans-serif;
+    --poppins-font: 'Poppins', sans-serif;
+    --text-color: #ffffff;
+    --selection-color: #ff7575;
+    --twitter-color: #4699e0;
+    --panel-color: #000000;
+    --menu-color: #909090;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 2rem 9rem;
+    font-size: 1.5rem
+}
+
+.re-font {
+    font-family: var(--recursive-font);
+}
+
+.po-font {
+    font-family: var(--poppins-font);
+}
+
+.italic {
+    font-style: italic;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-column-dir {
+    flex-direction: column;
+}
+
+.flex-auto {
+    flex: auto;
+}
+
+.menu {
+    list-style: none;
+}
+.menu li {
+    padding: 0 1rem;
+}
+
+#header {
+    align-items: center;
+    #top-nav {
+        align-self: stretch;
+        justify-content: space-between;
+        .menu {
+            font-size: 1rem;
+            justify-content: flex-end;
+        }
+    }
+    #logo-section {
+        align-items: center;
+        .web-heading {
+            font-weight: 400;
+            font-size: 4rem;
+            color: var(--selection-color);
+            margin: 1rem 0;
+        }
+        .sub-heading {
+            margin: 0 0 3rem;
+            font-style: normal;
+        }
+    }
+    #menu-section {
+        align-self: stretch;
+        border-top: 0.5px solid var(--menu-color);
+        .menu {
+            padding: 0px;
+            color: var(--menu-color);
+            li {
+                flex: 1 0 auto;
+            }
+        }
+    }
+}
+
+#main {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 5rem 0;
+    .card {
+        width: 338px;
+        padding: 1rem;
+        font-size: 1rem;
+        font-weight: 200;
+        background-color: var(--text-color);
+        color: var(--panel-color);
+        border-radius: 5%;
+        margin: 1rem;
+    }
+}
+
+#pagination {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 200;
+    color: var(--menu-color);
+    margin-bottom: 4rem;
+    a {
+        text-decoration: none;
+        padding: 1rem;
+    }
+    a:link, a:visited {
+        color: var(--menu-color)
+    }
+    a:hover {
+        border-top: 1px solid var(--selection-color);
+        color: var(--selection-color);
+        font-weight: 600;
+    }
+    a:active {
+        border-top: 1px solid var(--selection-color);
+    }
+}
+
+#footer {
+    padding: 2rem 0 0;
+    align-self: stretch;
+    border-top: 0.5px solid var(--menu-color);
+    justify-content: space-between;
+    .left span, .right {
+        padding: 4px;
+        font-size: 1rem;
+        background-color: var(--twitter-color);
+        color: var(--text-color);
+        border-radius: 5%;
+    }
+    .right {
+        background-image: url(../design/twitter_icon.png);
+        padding-left: 30px;
+        background-repeat: no-repeat;
+        background-position: 5px 50%;
+    }
+}
